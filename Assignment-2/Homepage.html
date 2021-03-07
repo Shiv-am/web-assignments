@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.example {
+        position: relative;
+        padding: 0;
+        width: 1835px;
+        display: block;
+        cursor: pointer;
+        overflow: hidden;
+      }
+      .content {
+        opacity: 0;
+        font-size: 40px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: black;
+        background-color: rgba(200, 200, 200, 0.5);
+        width: 1835px;
+        height: 800px;
+        -webkit-transition: all 400ms ease-out;
+        -moz-transition: all 400ms ease-out;
+        -o-transition: all 400ms ease-out;
+        -ms-transition: all 400ms ease-out;
+        transition: all 400ms ease-out;
+        text-align: center;
+      }
+      .example .content:hover {
+        opacity: 2;
+      }
+      .example .content .text {
+        height: 0;
+        opacity: 1;
+        transition-delay: 0s;
+        transition-duration: 0.4s;
+      }
+      .example .content:hover .text {
+        opacity: 1;
+        transform: translateY(250px);
+        -webkit-transform: translateY(250px);
+      }
+
+
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.image-container:hover{
+}
+.abc
+{
+text-align: right;
+
+  color: #f2f2f2;
+  margin-right: 15px;
+
+}
+.example{
+margin-left:30px;
+margin-right:30px;
+margin-top:20px;
+margin-bottom:20px;
+}
+  .footer {
+  
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 90%;
+   background-color: #333;
+   color: #333;
+   text-align: center;
+   
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 280px;
+  height: 250px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+.topnav {
+  overflow: hidden;
+  background-color:#0080ff;
+
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.abc p:active{
+    background-color: #ddd;
+  color: black;
+}
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+
+
+@keyframes multiple-image-crossfade {
+  0% {
+    opacity:1;
+  }
+  17% {
+    opacity:1;
+  }
+  25% {
+    opacity:0;
+  }
+  92% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="topnav" id="myTopnav">
+  <a href="#home" >Home</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+   <p class="abc" href="#Sign in" >Sign in</p>
+</div>
+<div class="example"> 
+<img id="cf4a"src="https://inthemix.on-premise.com/wp/wp-content/uploads/2015/12/title4.jpg" alt="Beach" height="800px" width="1835px">
+<div class="content">
+        <div class="text">Beaches to visit in India</div>
+</div>
+<table  >
+<tr>
+<td>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+    
+      <img src="data:image/jpeg;base64,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" alt="dog" style="width:290px;height:250px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Goa</h1> 
+	  <p>Goa Beach</p>
+      <p>Discovered in the far north of the state, Morjim presents one of the more wild expanses of sand for you to embrace during your Goa holidays.</p> 
+      
+    </div>
+  </div>
+</div>
+</td>
+<td style="color:white">000<td>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+    
+      <img src="https://i1.wp.com/theorchardgreens.com/wp-content/uploads/2020/03/Things-to-do-in-Manali.jpg" alt="dog" style="width:280px;height:250px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Himachal Pradesh</h1> 
+      <p>Manali</p> 
+      <p>Himachal Pradesh is a northern Indian state in the Himalayas. It's home to scenic mountain towns and resorts such as Dalhousie.</p>
+    </div>
+  </div>
+</div>
+</td><td style="color:white">00<td>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+    
+      <img src="https://seoimgak.mmtcdn.com/blog/sites/default/files/images/allepey.jpg" alt="dog" style="width:280px;height:250px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Kerla</h1> 
+      <p>Kochi</p> 
+      <p>It's known for its palm-lined beaches and backwaters, a network of canals</p>
+    </div>
+  </div>
+</div>
+</td>
+<td style="color:white">00<td>
+<td>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+    
+      <img src="https://www.planetware.com/wpimages/2019/11/india-best-places-to-visit-mumbai.jpg" alt="dog" style="width:280px;height:250px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Mumbai</h1>  
+      <p>Want to see a more cosmopolitan side of India? Head to the energetic, coastal city of Mumbai—home to ultra-wealthy entrepreneurs and the hottest Bollywood actors.</p>
+    </div>
+  </div>
+</div>
+</td>
+<td style="color:white">00<td>
+<td>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+    
+      <img src="https://cdn.tourradar.com/s3/tour/1500x800/139566_d97baf8c.jpg" alt="dog" style="width:280px;height:250px;">
+    </div>
+    <div class="flip-card-back">
+      <h1> Rajasthan</h1> 
+	   
+      <p>Translated to "Land of Kings," Rajasthan brims with remnants of the kings and queens of past centuries</p> 
+     
+    </div>
+  </div>
+</div>
+</td>
+<td style="color:white">00<td>
+<td>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+    
+      <img src="https://www.holidify.com/images/bgImages/KOVALAM.jpg" alt="dog" style="width:280px;height:250px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Kerela</h1> 
+      <p>Amritsar, the "Jewel of Punjab," has made its claim to fame with its remarkable Golden Temple.</p>
+    </div>
+  </div>
+</div>
+</td>
+</table>
+
+<div class="footer">
+  <p></p>
+  <br>
+</div>
+
+
+</body>
+</html>
